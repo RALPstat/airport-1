@@ -1,0 +1,35 @@
+=Aeropuerto (Parte 1)
+
+El objetivo de este challenge crear una aplicación que nos permita administrar los salidas y llegadas de un aeropuerto, y al mismo tiempo aplicar belongs_to, has_one, y has_many.
+
+===Instrucciones
+
+1. Crea una aplicación llamada airport-1.
+2. Usando el generador de Rails, crea los siguientes modelos:
+
+====Airline
+
+- name
+====Flight
+
+- airline
+- number
+
+====Departure
+
+- flight
+- date (utiliza un campo datetime)
+- status (closed, on gate, boarding, took off) (utiliza un campo enum)
+
+====Arrival
+
+- flight
+- date (utiliza un campo datetime)
+- status (on time, delayed, landing, landed) (utiliza un campo enum)
+
+Nota: Lo más importante de este challenge es identificar correctamente las relaciones belongs_to, has_one, y has_many.
+
+3. Usando el generador de Rails, crea un controlador para listar los vuelos (flights_controller) con una única acción index que muestre las salidas a la izquierda y las llegadas a la derecha.
+4. La ruta principal de la aplicación debe mostrar la lista del punto anterior.
+4. Crea algunos datos iniciales para tu aplicación utilizando seeds (p.e. dos aerolíneas y dos vuelos para cada una).
+5. Publica tu proyecto en Github.
